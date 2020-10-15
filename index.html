@@ -17,8 +17,8 @@
         <div class="card-header">
           <h2>Instructions</h2>
           <ul class="instruction-list">
-              <li>Choose many characters you want your password to have.</li>
-              <li>Choose what types of characters you want to inlude in your password.</li>
+              <li>Choose how many characters you want your password to have.</li>
+              <li>Choose what types of characters you want to include in your password.</li>
               <li>Click 'Create Password' to generate a new password!</li>
               <li>Click 'Copy!' if you would like to copy the password to your clipboard!</li>
               <li>Click 'Reset' if you would like to reset your criteria for a new password.</li>
@@ -31,6 +31,24 @@
             <div class="range-value" id="rangeV"></div>
             <input id="range" type="range" min="8" max="128" value="16" step="1">
         </div>
+        <h3>Please select the character types you would like to have in your desired password:</h3>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">lower case</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">upper case</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+            <label class="form-check-label" for="inlineCheckbox3">numeric</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+            <label class="form-check-label" for="inlineCheckbox4">Special characters i.e. !@#$%^&*</label>
+          </div>
+          <br><br>
         <div class="card-body">
           <textarea
             readonly

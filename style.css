@@ -50,18 +50,16 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background-color: #9aad60da;
+  background-color: #bf18c5;
   height: 2px;
 }
 
 .card-body {
   min-height: 100px;
-  background-color: rgb(148, 34, 34);
 }
 
 .card-footer {
   text-align: center;
-  background-color: rgb(153, 146, 134);
 }
 
 .card-footer::before {
@@ -80,7 +78,7 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: rgb(8, 175, 64);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -173,7 +171,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background: rgb(168, 84, 84);
+  background: rgb(11, 129, 110);
   box-shadow: 0 0 4px 0 rgba(0,0,0, 1);
   cursor: pointer;
   -webkit-appearance: none;
@@ -195,8 +193,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   height: 24px;
   line-height: 24px;
   text-align: center;
-  background: #f4f003;
-  color: rgb(0, 0, 0);
+  background: rgb(11, 129, 110);
+  color: rgb(255, 255, 255);
   font-size: 12px;
   display: block;
   position: absolute;
@@ -209,7 +207,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 10px solid #f4f003;
+  border-top: 10px solid rgb(11, 129, 110);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   top: 100%;
