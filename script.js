@@ -14,7 +14,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-//displays current slider value
+//code to display value of the bubble from css-tricks.com
 const
     range = document.getElementById('range'),
     rangeV = document.getElementById('rangeV'),

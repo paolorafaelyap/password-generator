@@ -28,7 +28,8 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: hsl(123, 57%, 54%);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .card {
@@ -137,7 +138,7 @@ button[disabled] {
   }
 }
 
-/*styling for slider*/
+/*styling for the value of the slider bubble from css-tricks.com*/
 
 body{
   min-height: 100vh;
@@ -183,7 +184,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 .range-value{
   position: absolute;
-  top: -50%;
+  top: 40%;
 }
 .range-value span{
   width: 30px;

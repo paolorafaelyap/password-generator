@@ -19,6 +19,8 @@
         </div>
         <div class="range-wrap">
             <h2>Select character length:</h2>
+            <br>
+            <!--slider range-->
             <div class="range-value" id="rangeV"></div>
             <input id="range" type="range" min="8" max="128" value="16" step="1">
         </div>
@@ -26,12 +28,22 @@
           <textarea
             readonly
             id="password"
-            placeholder="Your Secure Password"
+            placeholder="Your new password will magically appear here"
             aria-label="Generated Password"
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+         <div class="row">
+             <div class="column">
+                <button id="generate" class="btn">Create Password</button>
+             </div>
+            <div class="column">
+                <input class="btn btn-danger" type="reset" value="Reset">
+            </div>
+            <div class="column">
+                <button id="generate" class="btn">Copy!</button>
+            </div>
+         </div>
         </div>
       </div>
     </div>
