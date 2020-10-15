@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>-->
   </head>
   <body>
     <div class="wrapper">
@@ -15,10 +15,17 @@
       </header>
       <div class="card">
         <div class="card-header">
-          <h1>Generate a Password</h1>
+          <h2>Instructions</h2>
+          <ul class="instruction-list">
+              <li>Choose many characters you want your password to have.</li>
+              <li>Choose what types of characters you want to inlude in your password.</li>
+              <li>Click 'Create Password' to generate a new password!</li>
+              <li>Click 'Copy!' if you would like to copy the password to your clipboard!</li>
+              <li>Click 'Reset' if you would like to reset your criteria for a new password.</li>
+          </ul>
         </div>
         <div class="range-wrap">
-            <h2>Select character length:</h2>
+            <h3>Please select character length:</h3>
             <br>
             <!--slider range-->
             <div class="range-value" id="rangeV"></div>
@@ -35,13 +42,13 @@
         <div class="card-footer">
          <div class="row">
              <div class="column">
-                <button id="generate" class="btn">Create Password</button>
+                <input class="btn btn-danger" type="submit" value="Create Password" id="generate">
              </div>
             <div class="column">
-                <input class="btn btn-danger" type="reset" value="Reset">
+                <input class="btn btn-danger" type="reset" value="Reset" id="reset">
             </div>
             <div class="column">
-                <button id="generate" class="btn">Copy!</button>
+                <input class="btn btn-danger" type="button" value="Copy!" id="copy">
             </div>
          </div>
         </div>

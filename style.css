@@ -11,6 +11,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background: black;
 }
 
 body {
@@ -33,38 +34,41 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsla(210, 5%, 16%, 0.308);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  color: hsl(123, 57%, 54%);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  font-family: 'Courier New', Courier, monospace
 }
 
 .card-header::after {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background-color: #9aad60da;
   height: 2px;
 }
 
 .card-body {
   min-height: 100px;
+  background-color: rgb(148, 34, 34);
 }
 
 .card-footer {
   text-align: center;
+  background-color: rgb(153, 146, 134);
 }
 
 .card-footer::before {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #bf18c5;
   height: 2px;
 }
 
@@ -109,7 +113,7 @@ button[disabled] {
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 85px;
+  padding-bottom: 15px;
   font-size: 1.2rem;
   text-align: center;
   margin-top: 10px;
@@ -162,21 +166,21 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 4px;
   cursor: pointer;
   animation-duration: 0.2s;
-  background: #03a9f4;
+  background: #f4f003;
   border-radius: 25px;
 }
 input[type=range]::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background: #fff;
+  background: rgb(168, 84, 84);
   box-shadow: 0 0 4px 0 rgba(0,0,0, 1);
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -8px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #03a9f4;
+  background: #f4f003;
 }
 .range-wrap{
   width: 500px;
@@ -191,8 +195,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   height: 24px;
   line-height: 24px;
   text-align: center;
-  background: #03a9f4;
-  color: #fff;
+  background: #f4f003;
+  color: rgb(0, 0, 0);
   font-size: 12px;
   display: block;
   position: absolute;
@@ -205,11 +209,25 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 10px solid #03a9f4;
+  border-top: 10px solid #f4f003;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   top: 100%;
   left: 50%;
   margin-left: -5px;
   margin-top: -1px;
+}
+
+/* styling for rows of buttons */
+
+.column {
+  float: left;
+  width: auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
