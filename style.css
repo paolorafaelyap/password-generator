@@ -236,12 +236,15 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 @media screen and (max-width: 740px) {
 	.btn {
-		width: 60%;
+    width: 60%;
+    text-align: center;
 	}
 }
 @media screen and (max-width: 590px) {
 	.btn {
-		padding-bottom: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    text-align: center;
 	}
 	.card {
 		padding-top: 100px;
