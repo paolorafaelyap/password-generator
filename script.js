@@ -18,14 +18,10 @@ range.addEventListener('input', setValue);
 //event listener
 document.getElementById("generate").addEventListener("click", generatePassword);
 document.getElementById("reset").addEventListener("click", reset);
-document.getElementById("copy").addEventListener("click", copy);
 
 function reset () 
 {
-    if (confirm("Resetting will refresh the page. Click OK to continue.") === true)
-    {
         document.location.reload(); //refreshes page
-    }
 };
 
 
@@ -166,6 +162,15 @@ function generatePassword()
      }
     }
 }
+// copy function found from https://codepen.io/shaikmaqsood/pen/XmydxJ
+function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+    alert("Copied to clipboard!");
+  }
 
 // Add event listener to generate button
 //generateBtn.addEventListener("click", writePassword);
