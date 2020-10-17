@@ -250,6 +250,11 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 @media screen and (max-width: 400px) {
 	.btn {
-		font-size: 15px;
-	}
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .card{
+    width: 40%;
+  }
 }
