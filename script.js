@@ -38,7 +38,6 @@ function reset ()
 function generatePassword() 
 {
     // first, create arrays for each criteria
-
     var lowerCase=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
     "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -50,118 +49,120 @@ function generatePassword()
 
     var specialChar=["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "<", ">","?"];
 
-    // if desired password contains all criteria
-
-    var all = lowerCase.concat(upperCase, numbers, specialChar);
-
-    //if desired password only contains three of the criteria
-
-    var minusLowerCase = upperCase.concat(numbers, specialChar);
-    var minusUpperCase = lowerCase.concat(numbers, specialChar);
-    var minusNumeric = lowerCase.concat(upperCase, specialChar);
-    var minusSpecial= lowerCase.concat(upperCase, numbers);
-
-    //if desired password contains two criteria
-    var letters = [].concat(lowerCase, upperCase);
-    var numLower=[].concat(lowerCase, numbers);
-    var specLower=[].concat(lowerCase, specialChar);
-    var numUpper=[].concat(upperCase, numbers);
-    var specUpper=[].concat(upperCase, specialChar);
-    var specNum=[].concat(numbers, specialChar);
-
-    //next, create a variable that randomizes index based on criteria
-
-    var indexLow= Math.floor(Math.random() * 27);
-    var indexUp= Math.floor(Math.random() * 27);
-    var indexNum= Math.floor(Math.random() * 11);
-    var indexSpec= Math.floor(Math.random() * 14);
-    var indexLetters= Math.floor(Math.random() * 53);
-    var indexLetNum= Math.floor(Math.random() * 37);
-    var indexSpecNum= Math.floor(Math.random() * 24);
-    var indexSpecLet= Math.floor(Math.random() * 40);
-    var noLetter = Math.floor(Math.random() * 50);
-    var noSpec = Math.floor(Math.random() * 63);
-    var noNum= Math.floor(Math.random() * 66);
-    var indexAll=Math.floor(Math.random() * 76);
-
-    //setting constant value for input
-    const inputLength = document.getElementById("range").value;
     //setting input values for checked
     const numBox = document.getElementById("numeric").checked;
     const specBox = document.getElementById("special").checked;
     const lowBox = document.getElementById("lowercase").checked;
     const upperBox = document.getElementById("uppercase").checked;
+    
+
+    //setting constant value for input
+    const inputLength = document.getElementById("range").value;
 
     for (i=0; i<inputLength; i++)
     {
+   
      if (numBox && specBox && lowBox && upperBox)
      {
-         all[indexAll];
+         //if desired password contains all four criteria:
+
+         var all=[].concat(lowerCase, upperCase, numbers, specialChar);
+         var indexAll=Math.floor(Math.random() * 75);
+         document.getElementById("password").append(all[indexAll]);
      }   
+        //if desired password only contains three of the criteria:
      else if (!numBox && specBox && lowBox && upperBox)
      {
-         minusNumeric[noNum];
+         var minusNumeric = lowerCase.concat(upperCase, specialChar);
+         var noNum= Math.floor(Math.random() * 65);
+         document.getElementById("password").append(minusNumeric[noNum]);
      }
 
      else if (numBox && !specBox && lowBox && upperBox)
      {
-         minusSpecial[noSpec];
+        var minusSpecial= lowerCase.concat(upperCase, numbers);
+        var noSpec = Math.floor(Math.random() * 62);
+        document.getElementById("password").append(minusSpecial[noSpec]);
      }
 
      else if (numBox && specBox && !lowBox && upperBox)
      {
-         minusLowerCase[noLetter];
+        var minusLowerCase = upperCase.concat(numbers, specialChar);
+        var noLetter = Math.floor(Math.random() * 49);
+        document.getElementById("password").append(minusLowerCase[noLetter]);
      }
 
      else if (numBox && specBox && lowBox && !upperBox)
      {
-         minusUpperCase[noLetter];
+        var minusUpperCase = lowerCase.concat(numbers, specialChar);
+        var noLetter = Math.floor(Math.random() * 49);
+        document.getElementById("password").append(minusUpperCase[noLetter]);
      }
 
+     //if desired password contains two criteria:
      else if (numBox && specBox && !lowBox && !upperBox)
      {
-        specNum[indexSpecNum];
+        var specNum=[].concat(numbers, specialChar);
+        var indexSpecNum= Math.floor(Math.random() * 23);
+        document.getElementById("password").append(specNum[indexSpecNum]);
      }
      
      else if (numBox && !specBox && lowBox && !upperBox)
      {
-        numLower[indexLetNum];
+        var numLower=[].concat(lowerCase, numbers);
+        var indexLetNum= Math.floor(Math.random() * 36);
+        document.getElementById("password").append(numLower[indexLetNum]);
      }
      else if (!numBox && specBox && lowBox && !upperBox)
      {
-         specLower[indexSpecLet];
+        var specLower=[].concat(lowerCase, specialChar);
+        var indexSpecLet= Math.floor(Math.random() * 39);
+        document.getElementById("password").append(specLower[indexSpecLet]);
      }
      else if (!numBox && !specBox && lowBox && upperBox)
      {
-        letters[indexLetters];
+        var letters = [].concat(lowerCase, upperCase);
+        var indexLetters= Math.floor(Math.random() * 52);
+        document.getElementById("password").append(letters[indexLetters]);
      }
      else if (numBox && !specBox && !lowBox && upperBox)
      {
-         numUpper[indexLetNum];
+        var numUpper=[].concat(upperCase, numbers);
+        var indexLetNum= Math.floor(Math.random() * 36);
+        document.getElementById("password").append(numUpper[indexLetNum]);
      }
      else if (!numBox && specBox && !lowBox && upperBox)
      {
-         specUpper[indexSpecLet];
+        var specUpper=[].concat(upperCase, specialChar);
+        var indexSpecLet= Math.floor(Math.random() * 39);
+        document.getElementById("password").append(specUpper[indexSpecLet]);
      }
-     else if (numBox && !specBox && !lowBox && upperBox)
+     //if desired password contains one criteria:
+     else if (numBox && !specBox && !lowBox && !upperBox)
      {
-         numbers[indexNum];
+        var indexNum= Math.floor(Math.random() * 10);
+        document.getElementById("password").append(numbers[indexNum]);
      }
      else if (!numBox && specBox && !lowBox && !upperBox)
      {
-         specialChar[indexSpec];
+        var indexSpec= Math.floor(Math.random() * 13);
+        document.getElementById("password").append(specialChar[indexSpec]);
      }
      else if (!numBox && !specBox && lowBox && !upperBox)
      {
-        lowerCase[indexLow];
+        var indexLow= Math.floor(Math.random() * 26);
+        document.getElementById("password").append(lowerCase[indexLow]);
      }
      else if (!numBox && !specBox && !lowBox && upperBox)
      {
-         upperCase[indexUp];
+        var indexUp= Math.floor(Math.random() * 26);
+        document.getElementById("password").append(upperCase[indexUp]);
      }
+     // if password contains on criteria:
      else
      {
          alert("Please select at least one criteria.");
+         return;
      }
     }
 }

@@ -50,23 +50,26 @@
           </div>
           <br><br>
         <div class="card-body">
+          <output>
           <textarea
             readonly
             id="password"
             placeholder="Your new password will magically appear here"
             aria-label="Generated Password"
           ></textarea>
+          </output>
         </div>
         <div class="card-footer">
          <div class="row">
              <div class="column">
-                <input class="btn btn-danger" type="submit" value="Create Password" id="generate">
+                <button class="btn btn-danger" type="button" value="Create Password" id="generate">
+                  Make A New Password!</button>
              </div>
             <div class="column">
-                <input class="btn btn-danger" type="reset" value="Reset" id="reset">
+                <button class="btn btn-danger" type="button" value="Reset" id="reset">Reset</button>
             </div>
             <div class="column">
-                <input class="btn btn-danger" type="button" value="Copy!" id="copy">
+                <button class="btn btn-danger" type="button" value="Copy!" id="copy">Copy Me</button>
             </div>
          </div>
         </div>
