@@ -236,20 +236,39 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 @media screen and (max-width: 740px) {
 	.btn {
-    width: 60%;
+    width: 100%;
     text-align: center;
 	}
 }
 @media screen and (max-width: 590px) {
+  .header{
+    font-size:20px;
+    text-align: left;
+  }
 	.btn {
     padding-bottom: 10px;
-    width: 100%;
+    width: 80%;
     text-align: center;
 	}
 	.card {
-    padding-top: 100px;
+    padding-top: 10px;
     width: 100%;
-	}
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  .range-wrap{
+    width: 100%;
+  }
+
+  .card-body{
+    width: 100%;
+  }
+
+  #password{
+    font-size: 15px;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 400px) {
 	.btn {
@@ -258,6 +277,19 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   }
   
   .card{
-    width: 40%;
+    width: 100%;
+  }
+
+  .card-body{
+    width: 100%;
+  }
+
+  #password{
+    font-size: 10px;
+    width: 100%;
+  }
+
+  .card-header{
+    text-align: left;
   }
 }
