@@ -39,53 +39,53 @@ function generatePassword()
 {
     // first, create arrays for each criteria
 
-var lowerCase=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
-"l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var lowerCase=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
+    "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-var upperCase=["A", "B", "C", "D", "E", "F", "G", "H", "I", 
-"J","K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", 
-"Y", "Z"];
+    var upperCase=["A", "B", "C", "D", "E", "F", "G", "H", "I", 
+    "J","K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", 
+    "Y", "Z"];
 
-var numbers=["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+    var numbers=["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
-var specialChar=["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "<", ">","?"];
+    var specialChar=["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "<", ">","?"];
 
-// if desired password contains all criteria
+    // if desired password contains all criteria
 
-var all = lowerCase.concat(upperCase, numbers, specialChar);
+    var all = lowerCase.concat(upperCase, numbers, specialChar);
 
-//if desired password only contains three of the criteria
+    //if desired password only contains three of the criteria
 
-var minusLowerCase = upperCase.concat(numbers, specialChar);
-var minusUpperCase = lowerCase.concat(numbers, specialChar);
-var minusNumeric = lowerCase.concat(upperCase, specialChar);
-var minusSpecial= lowerCase.concat(upperCase, numbers);
+    var minusLowerCase = upperCase.concat(numbers, specialChar);
+    var minusUpperCase = lowerCase.concat(numbers, specialChar);
+    var minusNumeric = lowerCase.concat(upperCase, specialChar);
+    var minusSpecial= lowerCase.concat(upperCase, numbers);
 
-//if desired password contains two criteria
-var letters = [].concat(lowerCase, upperCase);
-var numLower=[].concat(lowerCase, numbers);
-var specLower=[].concat(lowerCase, specialChar);
-var numUpper=[].concat(upperCase, numbers);
-var specUpper=[].concat(upperCase, specialChar);
-var specNum=[].concat(numbers, specialChar);
+    //if desired password contains two criteria
+    var letters = [].concat(lowerCase, upperCase);
+    var numLower=[].concat(lowerCase, numbers);
+    var specLower=[].concat(lowerCase, specialChar);
+    var numUpper=[].concat(upperCase, numbers);
+    var specUpper=[].concat(upperCase, specialChar);
+    var specNum=[].concat(numbers, specialChar);
 
-//next, create a variable that randomizes index based on criteria
+    //next, create a variable that randomizes index based on criteria
 
-var indexLow= Math.floor(Math.random() * 27);
-var indexUp= Math.floor(Math.random() * 27);
-var indexNum= Math.floor(Math.random() * 11);
-var indexSpec= Math.floor(Math.random() * 14);
-var indexLetters= Math.floor(Math.random() * 53);
-var indexLetNum= Math.floor(Math.random() * 37);
-var indexSpecNum= Math.floor(Math.random() * 24);
-var indexSpecLet= Math.floor(Math.random() * 40);
-var noLetter = Math.floor(Math.random() * 50);
-var noSpec = Math.floor(Math.random() * 63);
-var noNum= Math.floor(Math.random() * 66);
-var indexAll=Math.floor(Math.random() * 76);
+    var indexLow= Math.floor(Math.random() * 27);
+    var indexUp= Math.floor(Math.random() * 27);
+    var indexNum= Math.floor(Math.random() * 11);
+    var indexSpec= Math.floor(Math.random() * 14);
+    var indexLetters= Math.floor(Math.random() * 53);
+    var indexLetNum= Math.floor(Math.random() * 37);
+    var indexSpecNum= Math.floor(Math.random() * 24);
+    var indexSpecLet= Math.floor(Math.random() * 40);
+    var noLetter = Math.floor(Math.random() * 50);
+    var noSpec = Math.floor(Math.random() * 63);
+    var noNum= Math.floor(Math.random() * 66);
+    var indexAll=Math.floor(Math.random() * 76);
 
     //setting constant value for input
-    const inputLength = document.getElementById("rangeV").value;
+    const inputLength = document.getElementById("range").value;
     //setting input values for checked
     const numBox = document.getElementById("numeric").checked;
     const specBox = document.getElementById("special").checked;
