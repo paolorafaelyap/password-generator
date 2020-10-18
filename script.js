@@ -65,6 +65,7 @@ function generatePassword()
          var all=[].concat(lowerCase, upperCase, numbers, specialChar);
          var indexAll=Math.floor(Math.random() * 75);
          document.getElementById("password").append(all[indexAll]);
+         document.getElementById("generate").disabled = true;
      }   
         //if desired password only contains three of the criteria:
      else if (!numBox && specBox && lowBox && upperBox)
@@ -72,6 +73,7 @@ function generatePassword()
          var minusNumeric = lowerCase.concat(upperCase, specialChar);
          var noNum= Math.floor(Math.random() * 65);
          document.getElementById("password").append(minusNumeric[noNum]);
+         document.getElementById("generate").disabled = true;
      }
 
      else if (numBox && !specBox && lowBox && upperBox)
@@ -79,6 +81,7 @@ function generatePassword()
         var minusSpecial= lowerCase.concat(upperCase, numbers);
         var noSpec = Math.floor(Math.random() * 62);
         document.getElementById("password").append(minusSpecial[noSpec]);
+        document.getElementById("generate").disabled = true;
      }
 
      else if (numBox && specBox && !lowBox && upperBox)
@@ -86,6 +89,7 @@ function generatePassword()
         var minusLowerCase = upperCase.concat(numbers, specialChar);
         var noLetter = Math.floor(Math.random() * 49);
         document.getElementById("password").append(minusLowerCase[noLetter]);
+        document.getElementById("generate").disabled = true;
      }
 
      else if (numBox && specBox && lowBox && !upperBox)
@@ -93,6 +97,7 @@ function generatePassword()
         var minusUpperCase = lowerCase.concat(numbers, specialChar);
         var noLetter = Math.floor(Math.random() * 49);
         document.getElementById("password").append(minusUpperCase[noLetter]);
+        document.getElementById("generate").disabled = true;
      }
 
      //if desired password contains two criteria:
@@ -101,6 +106,7 @@ function generatePassword()
         var specNum=[].concat(numbers, specialChar);
         var indexSpecNum= Math.floor(Math.random() * 23);
         document.getElementById("password").append(specNum[indexSpecNum]);
+        document.getElementById("generate").disabled = true;
      }
      
      else if (numBox && !specBox && lowBox && !upperBox)
@@ -108,51 +114,60 @@ function generatePassword()
         var numLower=[].concat(lowerCase, numbers);
         var indexLetNum= Math.floor(Math.random() * 36);
         document.getElementById("password").append(numLower[indexLetNum]);
+        document.getElementById("generate").disabled = true;
      }
      else if (!numBox && specBox && lowBox && !upperBox)
      {
         var specLower=[].concat(lowerCase, specialChar);
         var indexSpecLet= Math.floor(Math.random() * 39);
         document.getElementById("password").append(specLower[indexSpecLet]);
+        document.getElementById("generate").disabled = true;
      }
      else if (!numBox && !specBox && lowBox && upperBox)
      {
         var letters = [].concat(lowerCase, upperCase);
         var indexLetters= Math.floor(Math.random() * 52);
         document.getElementById("password").append(letters[indexLetters]);
+        document.getElementById("generate").disabled = true;
      }
      else if (numBox && !specBox && !lowBox && upperBox)
      {
         var numUpper=[].concat(upperCase, numbers);
         var indexLetNum= Math.floor(Math.random() * 36);
         document.getElementById("password").append(numUpper[indexLetNum]);
+        document.getElementById("generate").disabled = true;
      }
      else if (!numBox && specBox && !lowBox && upperBox)
      {
         var specUpper=[].concat(upperCase, specialChar);
         var indexSpecLet= Math.floor(Math.random() * 39);
         document.getElementById("password").append(specUpper[indexSpecLet]);
+        document.getElementById("generate").disabled = true;
      }
      //if desired password contains one criteria:
      else if (numBox && !specBox && !lowBox && !upperBox)
      {
         var indexNum= Math.floor(Math.random() * 10);
         document.getElementById("password").append(numbers[indexNum]);
+        document.getElementById("generate").disabled = true;
      }
      else if (!numBox && specBox && !lowBox && !upperBox)
      {
         var indexSpec= Math.floor(Math.random() * 13);
         document.getElementById("password").append(specialChar[indexSpec]);
+        document.getElementById("generate").disabled = true;
      }
      else if (!numBox && !specBox && lowBox && !upperBox)
      {
         var indexLow= Math.floor(Math.random() * 26);
         document.getElementById("password").append(lowerCase[indexLow]);
+        document.getElementById("generate").disabled = true;
      }
      else if (!numBox && !specBox && !lowBox && upperBox)
      {
         var indexUp= Math.floor(Math.random() * 26);
         document.getElementById("password").append(upperCase[indexUp]);
+        document.getElementById("generate").disabled = true;
      }
      // if password contains on criteria:
      else
@@ -172,8 +187,14 @@ function copyToClipboard(element) {
     alert("Copied to clipboard!");
   }
 
-// Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword);
 
+//disables the 'generate password' button after clicking it once
+function disableGen()
+{
+   if (generatePassword())
+   {
+      
+   }
+}
 
 
