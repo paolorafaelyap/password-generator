@@ -188,13 +188,4 @@ function copyToClipboard(element) {
   }
 
 
-//disables the 'generate password' button after clicking it once
-function disableGen()
-{
-   if (generatePassword())
-   {
-      
-   }
-}
-
 
